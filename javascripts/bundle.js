@@ -1,0 +1,1 @@
+var app=angular.module("app",["ngRoute"]).config(["$routeProvider",function(o){o.when("/",{templateUrl:"partials/signin.html",controller:"AuthCtrl"}).otherwise({redirectTo:"/"})}]);app.controller("AuthCtrl",["$scope",function(o,e){o.name="Ramil",o.clickName=function(){console.log("hhh")}}]);
