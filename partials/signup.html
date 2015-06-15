@@ -1,31 +1,31 @@
 <div class="input-form">
     <div class="alert alert-danger alert-dismissable animated fadeIn" ng-show="errors">
-        <strong>Warning!</strong> Wrong login or password
+        <strong>Warning!</strong> This user name exists
     </div>
-    <h1 class="pull-left m-v-20">Sign In</h1>
+    <h1 class="pull-left m-v-20">Sign Up</h1>
     <div class="pull-right m-v-20 p-v-10">
-        <a href="#/signup" class="btn btn-sm btn-success">Sign Up</a>    
+        <a href="#/signin" class="btn btn-sm btn-warning">Sign In</a>    
     </div>
-    <form name="signin_form" novalidate>
+    <form name="signup_form" novalidate>
         <div class="form-group">
             <input type="text" class="form-control" name="login" placeholder="Login" ng-model="user.login" required>
-            <div ng-show="signin_form.login.$dirty && signin_form.login.$invalid">
-                <span ng-show="signin_form.login.$error.required" class="help-block text-right">
+            <div ng-show="signup_form.login.$dirty && signup_form.login.$invalid">
+                <span ng-show="signup_form.login.$error.required" class="help-block text-right">
                     Enter your login
                 </span>
             </div>
         </div>
         <div class="form-group">
             <input type="password" class="form-control" name="password" placeholder="Password" ng-model="user.password" required>
-            <div ng-show="signin_form.password.$dirty && signin_form.password.$invalid">
-                <span ng-show="signin_form.password.$error.required" class="help-block text-right">
+            <div ng-show="signup_form.password.$dirty && signup_form.password.$invalid">
+                <span ng-show="signup_form.password.$error.required" class="help-block text-right">
                     Enter your password
                 </span>
             </div>
         </div>
         <div class="text-center m-v-20 p-v-10">
-            <button type="button" class="btn btn-primary btn-block" ng-click="userInput()" ng-disabled="signin_form.$invalid">
-                Sign In
+            <button type="button" class="btn btn-primary btn-block" ng-click="userInput()" ng-disabled="signup_form.$invalid">
+                Sign Up
             </button>
         </div>
     </form>
